@@ -1,7 +1,7 @@
 package libreria
 
 fun main() {
-    println("Bienvenido a tu estante de libros virtual")
+    println("📚 Bienvenido a tu estante de libros virtual 📚")
 
     // --- CREACIÓN DE OBJETOS ---
     val elQuijote = Libro(
@@ -18,20 +18,16 @@ fun main() {
         numeroEdicion = 255
     )
 
-    // --- USO DE LOS OBJETOS ---
-    println("\n--- Información de las publicaciones ---")
+
+    println("\n--- Publicaciones en el estante ---")
     println(elQuijote.obtenerDescripcion())
-    println("Género: ${elQuijote.genero}")
-
     println(nationalGeographic.obtenerDescripcion())
-    println("Edición N°: ${nationalGeographic.numeroEdicion}")
 
 
-    println("\n--- Acciones ---")
-    // Usamos los métodos de la interfaz Prestable
+    println("\n--- Simulación de préstamos para '${elQuijote.titulo}' ---")
+
     elQuijote.prestar()
     elQuijote.devolver()
 
-    // La revista no tiene el método prestar(), porque no implementa la interfaz.
-    // nationalGeographic.prestar() // <-- Esta línea daría error.
+
 }
